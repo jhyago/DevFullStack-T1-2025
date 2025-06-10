@@ -1,0 +1,177 @@
+:root {
+--primary-color: #007bff;
+--primary-dark: #0056b3;
+--background-color: #f0f2f5;
+--card-background: #ffffff;
+--text-color: #333;
+--label-color: #555;
+--border-color: #ced4da;
+--focus-shadow: rgba(0, 123, 255, 0.25);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+.container {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2em;
+}
+.form-header p {
+    color: var(--label-color);
+    font-size: 1.1em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group-radio label,
+.form-message label,
+.form-terms label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--label-color);
+}
+
+.input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+.input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem var(--focus-shadow);
+    outline: none;
+}
+
+.form-group-radio {
+    margin-bottom: 20px;
+}
+
+.form-group-radio label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.form-group-radio .radiobox {
+    margin-right: 8px;
+    accent-color: var(--primary-color);
+}
+
+select {
+   
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 10px auto;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-message {
+    margin-bottom: 20px;
+}
+.form-terms {
+    margin-bottom: 25px;
+}
+
+.form-terms .checkbox {
+    margin-right: 8px;
+    accent-color: var(--primary-color);
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    .form-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .form-header p {
+        font-size: 1em;
+    }
+    
+    .form-group-radio label {
+        margin-right: 15px;
+        font-size: 0.95em;
+    }
+    .input,
+    select,
+    textarea,
+    .button {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+}
